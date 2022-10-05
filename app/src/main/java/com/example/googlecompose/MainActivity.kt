@@ -3,9 +3,11 @@ package com.example.googlecompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -20,12 +22,21 @@ class MainActivity : ComponentActivity() {
         setContent {
             GoogleComposeTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                MyApp()
+            }
+        }
+    }
+}
+
+@Composable
+fun MyApp(names: List<String> = listOf("World", "Compose")) {
+    Surface(
+        modifier = Modifier.padding(vertical = 4.dp),
+        color = MaterialTheme.colors.background
+    ) {
+        Column {
+            for (name in names) {
+                Greeting(name = name)
             }
         }
     }
@@ -33,8 +44,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Surface(color = MaterialTheme.colors.primary) {
-        Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
+    Surface(
+        color = MaterialTheme.colors.primary,
+        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        Row(modifier = Modifier.padding(24.dp)) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text = "Hello,")
+                Text(text = name)
+            }
+            OutlinedButton(onClick = { /*TODO*/ }) {
+                Text(text = "Show More")
+            }
+        }
     }
 }
 
@@ -42,6 +64,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     GoogleComposeTheme {
-        Greeting("Android")
+        MyApp()
     }
 }
