@@ -22,7 +22,7 @@ fun OnBoardingScreen(onContinueClicked: () -> Unit) {
             verticalArrangement = Arrangement.Center, // center
             horizontalAlignment = Alignment.CenterHorizontally // center horizontally
         ) {
-            Text(text = "Welcome to the Basics Codelab!")
+            Text(text = "Welcome to Jetpack Compose!")
             Button(
                 modifier = Modifier.padding(vertical = 24.dp),
                 onClick = onContinueClicked
