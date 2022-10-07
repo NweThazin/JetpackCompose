@@ -11,3 +11,12 @@ val alignYourBodyData = listOf(
     R.drawable.qoobee5 to R.string.label_qoobee5,
     R.drawable.qoobee6 to R.string.label_qoobee6
 ).map { DrawableStringPair(it.first, it.second) }
+
+val favoriteCollectionsData = listOf(
+    R.drawable.qoobee7 to R.string.label_qoobee7,
+    R.drawable.qoobee8 to R.string.label_qoobee8,
+    R.drawable.qoobee9 to R.string.label_qoobee9,
+    R.drawable.qoobee10 to R.string.label_qoobee10,
+    R.drawable.qoobee11 to R.string.label_qoobee11,
+    R.drawable.qoobee11 to R.string.label_qoobee12
+).map { DrawableStringPair(it.first, it.second) }
