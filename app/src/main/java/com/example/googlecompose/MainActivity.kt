@@ -31,6 +31,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.googlecompose.ui.basiclayout.BasicLayoutApp
+import com.example.googlecompose.ui.basiclayout.HomeScreen
 import com.example.googlecompose.ui.components.OnBoardingScreen
 import com.example.googlecompose.ui.theme.GoogleComposeTheme
 
@@ -54,7 +56,7 @@ fun MyApp() {
             shouldShowOnBoarding = false
         })
     } else {
-        Greetings()
+        BasicLayoutApp()
     }
 }
 
