@@ -22,8 +22,6 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         modifier
             .verticalScroll(rememberScrollState())
             .padding(vertical = 16.dp)
-            .fillMaxHeight()
-            .background(color = BasicLayoutBackground)
     ) {
         Spacer(modifier = Modifier.height(16.dp))
         SearchBar(Modifier.padding(16.dp))
